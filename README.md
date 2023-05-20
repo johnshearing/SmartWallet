@@ -53,18 +53,19 @@ Deploying a smart contract with the following properties should make this possib
 The contract works as follows:  
 * The owner deploys the smart contract.
 * The owner transfers a small amount of funds to the contract. 
-* The owner withdraws a small amount of funds from the contract to be certain the owner has control of funds in the contract.
+* The owner withdraws a small amount of funds from the contract to be certain the owner has control of funds in the contract and that the owner can use the contract just like a hardware wallet.
 * The owner sends a message to the contract to set the beneficiary addresses and the delays on each address before they may receive funds. 
-  * This could be a friend or relative or just a wallet address controlled by the owner.
+  * These could be a friends or relatives or just a recovery address controlled by the owner.
 * The owner sends a transaction to set the **number of epochs-from-now** for a short time into the future.
+  * If **number of epochs-from-now** is set to zero or any negative number then no recovery address will be able to claim the funds but the contract owner will still be able to use the contract like a hardware wallet.
 * The owner waits for the **global-epoch-trigger-point** to pass.
-* The owner askes the beneficiary to send 1 ADA to the contract using the hardware wallet controlling the beneficiary address.
-  * All funds should be dispersed to the beneficiary address when the 1 ADA is received.  
+* The owner asks the beneficiary claim the funds in the contract with a transactions built by a simple web app built for the purpose and signed with the hardware wallet controlling the recovery address.  
+  * All funds should be dispersed to the beneficiary address when the transaction is received.
 * If everything has been working correctly the owner loads the contract with significant funds and sets the **number of epochs-from-now** for perhaps one month into the future.
-* Every time the owner interacts with the contract the **global-epoch-trigger-point** will be set with respect the value contained in the variable called **number of epochs-from-now**.
-The contract owner must spend, receive, or send a signed message to the contract before the new **global-epoch-trigger-point** is reached or all funds will become available for beneficiaries to collect.
-
-In this way, the contract owner could set up a hardware wallet and then destroy the 24 words. If they lose the wallet it's no big deal - any one of beneficiary wallets will be able to collect all the funds when the **global-epoch-trigger-point** has passed.
+* Then, before the month has passed, the owner must send a transaction to the contract updating the **global-epoch-trigger-point** again with respect the **number of epochs-from-now**.
+  * If the owner fails to update the **global-epoch-trigger-point** the owner is assumed to have lost the controlling hardware wallet so all funds become available for beneficiaries to collect.
+  * In this way, the contract owner can set up a hardware wallet and then destroy the 24 words. 
+  * If they lose the wallet it's no big deal - any one of beneficiary wallets will be able to collect all the funds when the **global-epoch-trigger-point** has passed.
 
 Funds are always safe.
 There is nothing to lose. 
