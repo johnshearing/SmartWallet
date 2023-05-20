@@ -1,9 +1,9 @@
 # SmartWallet
 
-## Cardano Smart Contract Works Just Like A Hardware Wallet
+## Cardano Smart Contract Works With Your Hardware Wallet
 ## Trustless Last Will And Fund Recovery Options Supported
-## Lose your seed phrase? No problem!
-## Funds released to recovery accounts or beneficiaries after period of inactivity
+## Lost your hardware wallet? Lost your 24 word seed phrase too? No problem!
+## Funds released to recovery accounts or beneficiaries after a period of inactivity
 ## :)
 
 Difficulty securing seed phrases might be the biggest obstacle for cryptocurrency mass-adoption.  
