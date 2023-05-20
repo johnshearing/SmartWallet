@@ -1,7 +1,7 @@
 # SmartWallet
 
 ## Cardano Smart Contract Works With Your Hardware Wallet
-## Trustless Last Will And Fund Recovery Options Supported
+## Trustless Last Will and ADA Recovery Options Supported
 ## Lost your hardware wallet? Lost your 24 word seed phrase too? No problem!
 ## Funds released to recovery accounts or beneficiaries after a period of inactivity
 ## :)
