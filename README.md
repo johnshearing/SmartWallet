@@ -11,11 +11,12 @@ Loss of seed phrases due to untimely death causes suffering to families.
 SmartWallet fixes these issues.  
 
 With SmartWallet we only needed our 24 randomly generated words one time...  
-just to set up our wallets...  
+just to set up a hardware wallet...  
 and then we can destroy the seed phrase words if we want...  
 confidently knowing our accounts are secure...  
 and that we or our beneficiaries could never lose access to the wallet funds?  
 
+Funds are always safe.  
 Nothing to lose.  
 Nothing to get stolen.  
 Nothing to forget.  
@@ -72,3 +73,5 @@ There is nothing to lose.
 There is nothing to get stolen.  
 There is nothing to forget.  
 There is no one we need to trust.  
+
+
