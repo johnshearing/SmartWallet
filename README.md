@@ -65,19 +65,10 @@ The contract works as follows:
 * Then, before the month has passed, the owner must send a transaction to the contract updating the **global-epoch-trigger-point** again with respect the **number of epochs-from-now**.
   * If the owner fails to update the **global-epoch-trigger-point** the owner is assumed to have lost the controlling hardware wallet so all funds become available for beneficiaries to collect.
   * In this way, the contract owner can set up a hardware wallet and then destroy the 24 words. 
-  * If they lose the wallet it's no big deal - any one of beneficiary wallets will be able to collect all the funds when the **global-epoch-trigger-point** has passed.
+  * If the contract owner loses the hardware wallet or dies then any one of beneficiary wallets will be able to collect all the funds when the **global-epoch-trigger-point** + **extra-epochs-delayed-for-recovery-address-XX** has passed.
 
-Funds are always safe.
-There is nothing to lose. 
-There is nothing to get stolen. 
-There is nothing to forget.
-There is no one we need to trust.
-
-
-
-Comments please.
-I need to know the following before starting this work:
-Does a smart contract like this already exist?
-Can anyone think of a reason this wouldn't work or can't be done?
-
-Much thanks
+Funds are always safe.  
+There is nothing to lose.  
+There is nothing to get stolen.  
+There is nothing to forget.  
+There is no one we need to trust.  
