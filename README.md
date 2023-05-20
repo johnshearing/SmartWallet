@@ -1,18 +1,20 @@
 # SmartWallet
 
-## Cardano Smart Contract Funtions Just Like A Hardware Wallet.  
-Is Auto Executing Will With Funds Recovery Option After Period Of Inactivity
+## Cardano Smart Contract Works Just Like A Hardware Wallet
+## Trustless Last Will And Fund Recovery Options Supported
+## Lose your seed phrase? No problem!
+## Funds released to recovery accounts or beneficiary accounts after period of inactivity
+## :)
 
-Difficulty securing seed phrases might be the biggest obstacle for mass-adoption of cryptocurrency from an untimely death. 
-Loss of seed phrases and associated family funds do to untimely death is also an obstacle.
+Difficulty securing seed phrases might be the biggest obstacle for mass-adoption of cryptocurrency.  
+Loss of seed phrases do to untimely death causes suffering to families.  
+SmartWallet fixes these issues.  
 
-
-
-What if we only needed our 24 randomly generated words one time... 
-just to set up our wallets... 
-and then we could destroy the seed phrase if we wanted...
-confidently knowing our accounts are secure...
-and that we could never lose access to our funds?
+With SmartWallet we only needed our 24 randomly generated words one time...  
+just to set up our wallets...  
+and then we could destroy the seed phrase words if we wanted...  
+confidently knowing our accounts are secure...  
+and that we or our beneficiaries could never lose access to the wallet funds?  
 
 Nothing to lose. 
 Nothing to get stolen. 
