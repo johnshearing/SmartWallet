@@ -1,6 +1,9 @@
 # SmartWallet
 
-Difficulty in securing the seed phrases and the possibility of losing them might be the biggest obstacle for mass-adoption of cryptocurrency.
+Difficulty securing seed phrases might be the biggest obstacle for mass-adoption of cryptocurrency from an untimely death. 
+Loss of seed phrases and associated family funds do to untimely death is also an obstacle.
+
+
 
 What if we only needed our 24 randomly generated words one time... 
 just to set up our wallets... 
