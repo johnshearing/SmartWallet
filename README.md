@@ -64,7 +64,7 @@ The contract works as follows:
   * All funds should be dispersed to the beneficiary address when the transaction is received.
 * If everything has been working correctly the owner loads the contract with significant funds and sets the **number of epochs-from-now** for perhaps one month into the future.
 * Then, before the month has passed, the owner must send a transaction to the contract updating the **global-epoch-trigger-point** again with respect to the **number of epochs-from-now**.
-  * If the owner fails to update the **global-epoch-trigger-point** the owner is assumed to have lost the controlling hardware wallet so all funds become available for beneficiaries to collect.
+  * If the owner fails to update the **global-epoch-trigger-point** the owner is assumed to have lost the controlling hardware wallet so all funds become available for recovery addresses to claim.
   * In this way, the contract owner can set up a hardware wallet and then destroy the 24 words. 
   * If the contract owner loses the hardware wallet or dies then any one of the recovery wallets will be able to collect all the funds when the **global-epoch-trigger-point** + **extra-epochs-delayed-for-recovery-address-XX** has passed.
 
