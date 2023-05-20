@@ -1,6 +1,6 @@
 # SmartWallet
 
-Cardano Smart Contract Funtions Just Like A Hardware Wallet.
+## Cardano Smart Contract Funtions Just Like A Hardware Wallet.  
 Is Auto Executing Will With Funds Recovery Option After Period Of Inactivity
 
 Difficulty securing seed phrases might be the biggest obstacle for mass-adoption of cryptocurrency from an untimely death. 
