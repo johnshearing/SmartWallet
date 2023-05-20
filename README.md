@@ -3,50 +3,52 @@
 ## Cardano Smart Contract Works Just Like A Hardware Wallet
 ## Trustless Last Will And Fund Recovery Options Supported
 ## Lose your seed phrase? No problem!
-## Funds released to recovery accounts or beneficiary accounts after period of inactivity
+## Funds released to recovery accounts or beneficiaries after period of inactivity
 ## :)
 
-Difficulty securing seed phrases might be the biggest obstacle for mass-adoption of cryptocurrency.  
+Difficulty securing seed phrases might be the biggest obstacle for cryptocurrency mass-adoption.  
 Loss of seed phrases do to untimely death causes suffering to families.  
 SmartWallet fixes these issues.  
 
 With SmartWallet we only needed our 24 randomly generated words one time...  
 just to set up our wallets...  
-and then we could destroy the seed phrase words if we wanted...  
+and then we can destroy the seed phrase words if we want...  
 confidently knowing our accounts are secure...  
 and that we or our beneficiaries could never lose access to the wallet funds?  
 
-Nothing to lose. 
-Nothing to get stolen. 
-Nothing to forget.
-No one we need to trust.
+Nothing to lose.  
+Nothing to get stolen.  
+Nothing to forget.  
+No one we need to trust.  
 
 Deploying a smart contract with the following properties should make this possible.
 * Contract can receive funds like any wallet.
-* Contract can disperse funds of a given amount to a given receiving address given the correct signature, just like any wallet.
+* Contract can disperse funds of a given amount... to a given receiving address... given the correct signature... just like any wallet.
 * Contract contains a variable called **owners-public-key**
   * This is used to verify that commands sent to the contract have been signed by the owner's hardware wallet.
 * Contract contains a variable called **global-epoch-trigger-point**.
-  * This is the epoch at which it becomes possible to send funds to the beneficiary.
+  * This is the epoch at which it becomes possible to send funds to recovery accounts or to the beneficiary accounts.
 * Contract contains a variable called **number of epochs-from-now**.
   * This is a number used to update the **global-epoch-trigger-point**. 
-* Contract contains as many variables as needed called **beneficiary-address-01**, **beneficiary-address-02**, **...**
-  * These are the addresses where funds can go if the contract owner dies, or loses control of his/her hardware wallet which is used to sign messages that control the contract.
-* Contract contains as many variables as needed called **extra-epochs-delayed-for-beneficiary-address-01**, **extra-epochs-delayed-for-beneficiary-address-02**, **...**
-  * These variables are used to specify how many epochs past the **global-epoch-trigger-point** each beneficiary address must wait before it becomes valid and able to receive funds.
-* Contract can disperse all funds to any beneficiary address after the **global-epoch-trigger-point** has been passed.
-* If the number of epochs specified in the **extra-epochs-delayed-for-beneficiary-address-XX** is greater than zero then that many epochs must also pass after **global-epoch-trigger-point** has been reached before funds can be sent to that address.
-* We notice there can be many preprogrammed beneficiary addresses, each associated with their own unique times in the future when it will be possible to send funds to those unique addresses. 
-  * One of these addresses serves as the primary beneficiary address.
-  * The rest of these serve as backup addresses in case the first beneficiary loses control of their hardware wallet.
-* For the contract to disperse all funds to a preprogramed beneficiary address, the beneficiary must send 1 ADA to the contract from the hardware wallet controlling that address at any time after the address becomes valid. The contract will then immediately send all funds in the contract to the beneficiary's address.
-  * This method establishes that the beneficiary has control of the preprogrammed beneficiary address and so ensures that the funds will not be lost.
-* Contract can receive a message signed with a specific hardware wallet proving ownership of the contract.
-  * The message may contain a command to change the value stored in the variable called **number of epochs-from-now**. This will set the **global-epoch-trigger-point**.
-  * The message may contain a command to add, update, or deleted beneficiary addresses and their associated delays past the **global-epoch-trigger-point**.
-* Any spending, receiving, or message transaction by the contract's owner will set the **global-epoch-trigger-point** with respect to the **number of epochs-from-now**.
-  * This is how the owner tells the contract that he or she is still alive and in control of their hardware wallet.
-  * This is also how the contract owner sets the time interval before beneficiaries can collect all the funds from the contract. If the owner does not message the contract again within the **number of epochs-from-now** then it is presumed that the owner has lost the control of their hardware wallet or is perhaps dead.
+* Contract contains as many variables as needed called **recovery-address-01**, **recovery-address-02**, **...**
+  * These are the addresses which can claim funds if the contract owner dies, or loses the hardware wallet controling the contract.
+* Contract contains as many variables as needed called **extra-epochs-delayed-for-recovery-address-01**, **extra-epochs-delayed-for-recovery-address-02**, **...**
+  * These variables are used to specify how many epochs past the **global-epoch-trigger-point** each recovery address must wait before it becomes valid and able to claim funds.
+* Contract can disperse all funds to any recovery address after the **global-epoch-trigger-point** has been passed.
+* If the number of epochs specified in the **extra-epochs-delayed-for-recovery-address-XX** is greater than zero then that many epochs must also pass after **global-epoch-trigger-point** has been reached before funds can be sent to that address.
+* We notice there can be many preprogrammed recovery addresses, each associated with their own unique times in the future when it will be possible to send funds to those unique addresses. 
+  * The first of these addresses serves as the primary recovery or beneficiary address.
+  * The rest of these serve as backup addresses in case the contract owner or first beneficiary loses control of the hardware wallet which controls the recovery address.
+  * The times when each recovery address can become valid may be staggered creating an order in which people may claim the funds.
+* For the contract to disperse all funds to a preprogramed recovery/beneficiary address, the contract owner or beneficiary must send a signed transaction from the hardware wallet controlling the recovery address at any time after the address becomes valid. The contract will then immediately send all funds in the contract to the recovery address.
+  * This method establishes that the contract owner or beneficiary has control of the preprogrammed recovery address and so ensures that the funds will not be lost.
+* Contract can receive a message signed with the owners hardware wallet proving ownership of the contract.
+  * The message may contain a command to add, update, or deleted recovery addresses and their associated delays past the **global-epoch-trigger-point**.
+  * The message may contain a command to change the value stored in the variable called **number of epochs-from-now**.  
+  * The message may contain a command to update the **global-epoch-trigger-point** with respect to **number of epochs-from-now**.  
+    * This is how the owner tells the contract that he or she is still alive and in control of their hardware wallet.
+    * This is also how the contract owner sets the time interval before the owner/beneficiaries can recover all the funds from the contract. 
+    * If the owner does not message the contract again within the time specified by **number of epochs-from-now** then it is presumed that the owner has lost the control of their hardware wallet or is perhaps dead. 
 
 The contract works as follows:  
 * The owner deploys the smart contract.
