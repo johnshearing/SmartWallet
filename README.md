@@ -78,5 +78,5 @@ There is no one we need to trust.
 
 
 
-Don't completely trust your Ledger Nano S?  
+Don't completely trust the firmware on your Ledger Nano S?  
 Then also require a second signature using a different brand of hardware/software wallet for all spending transactions.
