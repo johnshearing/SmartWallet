@@ -1,10 +1,12 @@
 # SmartWallet
 
 ## Cardano Smart Contract Works With Your Hardware Wallet
+## Use It Just Like Any Hardware Wallet
 ## Trustless Last Will and ADA Recovery Options Supported
 ## Lost your hardware wallet? Lost your 24 word seed phrase too? No problem!
 ## Funds released to recovery accounts or beneficiaries after a period of inactivity
 ## :)
+## Muti-signatures supported.  
 
 Difficulty securing seed phrases might be the biggest obstacle for cryptocurrency mass-adoption.  
 Loss of seed phrases due to untimely death causes suffering to families.  
@@ -75,3 +77,6 @@ There is nothing to forget.
 There is no one we need to trust.  
 
 
+
+Don't completely trust your Ledger Nano S? 
+Then also require a second signature using a different brand of hardware/software wallet for all spending transactions.
