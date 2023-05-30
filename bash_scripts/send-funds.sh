@@ -4,14 +4,14 @@
 # This script builds a raw transaction, balances the transaction, signs the transaction, and submits the transaction.
 
 # Below is a typical command to run this script at the terminal window.
-# send-funds.sh sender_bob receiver_alice 4 transXX
+# send-funds.sh sender-bob receiver-alice 4 transXX
 
 # send-fund.sh is the name of this bash script.
 # Put this script in the scripts folder of course Docker container.
 
 
 # sender-bob has 3 files in the keys directory: sender-bob.addr, sender-bob.vkey, sender-bob.skey
-# sender-alice has 3 files in the keys directory: sender-alice.addr, sender-alice.vkey, sender-alice.skey
+# receiver-alice has 3 files in the keys directory: receiver-alice.addr, receiver-alice.vkey, receiver-alice.skey
 # These files were created with the create-key-pair.sh script found in the scripts directory of our course Docker container.
 # Create these files before using this script.
 
