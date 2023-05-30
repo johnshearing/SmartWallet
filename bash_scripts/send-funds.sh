@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Used to send ADA
+# This script builds a raw transaction, balances the transaction, signs the transaction, and submits the transaction.
+
 # Below is a typical command to run this script at the terminal window.
 # send-funds.sh sender_bob receiver_alice 4 transXX
 
