@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Below is a typical command to run this script at the bash terminal window.
+# Below is a typical command to run this script at the terminal window.
 # send-funds.sh sender_bob receiver_alice 4 transXX
 
 # send-fund.sh is the name of this bash script.
 # Put this script in the scripts folder of course Docker container.
+
 
 # sender-bob has 3 files in the keys directory: sender-bob.addr, sender-bob.vkey, sender-bob.skey
 # sender-alice has 3 files in the keys directory: sender-alice.addr, sender-alice.vkey, sender-alice.skey
@@ -42,7 +43,7 @@ key_path=/workspace/keys
 mkdir -p "$key_path"
 
 
-trans_path=/$4
+trans_path=$4
 mkdir -p "$key_path/$trans_path"
 
 
@@ -58,9 +59,6 @@ r_addr="$key_path/$2.addr"
 
 # Get the protocol parameters.
 cardano-cli query protocol-parameters --testnet-magic 2 --out-file $key_path/$trans_path/pparams.json
-
-# Get the transaction hash and index we will send funds from
-# cardano-cli query utxo --address $(cat $s_addr) --testnet-magic 
 
 # Convert spending amount from ADA to Lovelace
 amt_lovelace_spend=$(($3 * 1000000))
@@ -102,6 +100,7 @@ cardano-cli transaction build-raw --babbage-era \
 --protocol-params-file $key_path/$trans_path/pparams.json \
 --out-file $key_path/$trans_path/tx.raw
 
+
 # Sign the transaction
 cardano-cli transaction sign \
 --tx-body-file $key_path/$trans_path/tx.raw \
@@ -110,7 +109,16 @@ cardano-cli transaction sign \
 --out-file $key_path/$trans_path/tx.signed
 
 
+echo Sending $amt_lovelace_spend Lovelace
+echo $amt_in_sending_account Lovelace are at the spending address
+echo The amount at the spending address minus the amount being spent is $(($amt_in_sending_account-$amt_lovelace_spend))
+echo The transaction fee will be $trans_fee
+echo The change will be $(($amt_in_sending_account-$amt_lovelace_spend-$trans_fee)) That is amt_in_sending_account minus amt_lovelace_spend minus trans_fee
+
+
+# Submit the transaction
 cardano-cli transaction submit \
 --testnet-magic 2 \
 --tx-file $key_path/$trans_path/tx.signed 
+
 
