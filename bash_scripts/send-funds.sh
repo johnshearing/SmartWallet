@@ -3,7 +3,7 @@
 # Used to send ADA
 # This script builds a raw transaction, balances the transaction, signs the transaction, and submits the transaction.
 
-# Below is a typical command to run this script at the terminal window.
+# Below is a typical command to run this script at the terminal window. 4 ADA is being sent from Bob to Alice
 # send-funds.sh sender-bob receiver-alice 4 transXX
 
 # send-fund.sh is the name of this bash script.
