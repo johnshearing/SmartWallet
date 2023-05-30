@@ -107,7 +107,7 @@ cardano-cli transaction build-raw --babbage-era \
 # Sign the transaction
 cardano-cli transaction sign \
 --tx-body-file $key_path/$trans_path/tx.raw \
---signing-key-file $r_skey \
+--signing-key-file $s_skey \
 --testnet-magic 2 \
 --out-file $key_path/$trans_path/tx.signed
 
