@@ -1,3 +1,0 @@
-To avoid permissions error, run the following line before cardano-cli query tip is attempted when using local version of Marlowe starter kit.
-
-sudo chown -R $(id -u):$(id -g) /var/lib/docker/volumes/marlowe-starter-kit_shared/_data/node.socket
