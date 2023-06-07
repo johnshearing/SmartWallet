@@ -1,3 +1,11 @@
+
+
+Use a fresh clone of https://github.com/input-output-hk/marlowe-starter-kit/tree/bwbush/CIP30 and sync'd Marlowe Runtime from scratch on preprod using the docker file there, https://github.com/input-output-hk/marlowe-starter-kit/blob/bwbush/CIP30/docker-compose.yaml. Wait for it to sync and then run the example. (Make sure that Nami is using preprod, too.)
+
+Also, just now I slightly updated the documentation on the CIP30 branch, added npm install, and make the javascript a little more robust.
+
+The Status Code: 406 Not Acceptable that you received probably indicated that the version of Marlowe Runtime was too old and didn't yet support the three new HTTP headers required for CIP30, see https://github.com/input-output-hk/marlowe-starter-kit/blob/bwbush/CIP30/06-cip30/ReadMe.md#marlowe-runtime-api.
+
 If roles (instead of addresses) fit your use case, then these would provide abstraction that wouldn't tie the contract to specific addresses. Instead of updating or upgrading the contract to accommodate a new address, one would just have to move the role token from the old address to the new one. In fact, tokens like Ada Handles can be used as role tokens in Marlowe contracts. In this case the recovery and/or depositor addresses would be roles instead of explicit addresses.
 
 could be updated by reference script
