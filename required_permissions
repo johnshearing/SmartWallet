@@ -2,6 +2,14 @@ To avoid permissions error, run the following line before cardano-cli query tip 
 
 sudo chown -R $(id -u):$(id -g) /var/lib/docker/volumes/marlowe-starter-kit_shared/_data/node.socket
 
-Don't forget to switch branches after changing to the CIP30 example directory.
+
+After cloning the starter kit, don't forget to switch branches after changing to the starter kit directory.
+```
+git clone https://github.com/input-output-hk/marlowe-starter-kit/tree/bwbush/CIP30
+cd marlowe-starter-kit
 git checkout bwbush/CIP30
+nix develop
+export NETWORK=preprod
+docker-compose up -d
+```
 
