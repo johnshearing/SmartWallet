@@ -9,7 +9,9 @@ The Status Code: 406 Not Acceptable that you received probably indicated that th
 If roles (instead of addresses) fit your use case, then these would provide abstraction that wouldn't tie the contract to specific addresses. Instead of updating or upgrading the contract to accommodate a new address, one would just have to move the role token from the old address to the new one. In fact, tokens like Ada Handles can be used as role tokens in Marlowe contracts. In this case the recovery and/or depositor addresses would be roles instead of explicit addresses.
 
 could be updated by reference script
-Actually, you'll need a custom Plutus script to effectively update the address. The release epoch can be updated using a Choice block that contains a TimeInvervalEnd value. You'll have to do a bit of time arithmetic in the contract.
+Actually, you'll need a custom Plutus script to effectively update the address. 
+
+The release epoch can be updated using a Choice block that contains a TimeInvervalEnd value. You'll have to do a bit of time arithmetic in the contract.
 
  would be possible to update any of the fields
 I imagine that we'll have some examples of using Plutus in conjunction with Marlowe, but it might be a while before support for stuff like that is built into the Marlowe Runtime backend.
