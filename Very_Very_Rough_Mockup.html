@@ -4,10 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="view.css" type="text/css" rel="stylesheet"/>
     <script src="controller.js" type="application/javascript"> </script>
-    <script type="text/javascript" src="node_modules/renderjson/renderjson.js"></script>
     <title>Example of Using Marlowe Runtime with Nami Wallet</title>
   </head>
-  <body id="uiBody" onload="Controller.initialize(false)">
+  <body id="uiBody">
     <h1>Example of Using Marlowe Runtime with a CIP30 Wallet</h1>
     <p>This example shows how to use a Babbage-compatible <a href="https://github.com/cardano-foundation/CIPs/tree/master/CIP-0030" target="marlowe">CIP30</a> wallet such as <a href="https://namiwallet.io/" target="marlowe">Nami</a> to sign Marlowe transactions. The example contract here simply receives a deposit and waits until a specified time before the funds become payable to an address.</p>
     <div id="uiPanels">
@@ -25,78 +24,80 @@
 
 
             <tr>
-              <td>Depositor01 public key:</td>
-              <td><input id="uiPublicKey" type="text" onchange="Controller.makeContract()"/></td>              
+              <td>Depositor01 public key</td>
+              <td><input /></td>              
             </tr>
 
 
             <tr>
-              <td>Depositor01 address:</td>
-              <td><input id="uiAddress" type="text" onchange="Controller.makeContract()"/></td>              
+              <td>Depositor01 address</td>
+              <td><input /></td>              
             </tr>
             
             
             
             <tr>
-              <td>Depositor02 public key:</td>
-              <td><input id="uiPublicKey" type="text" onchange="Controller.makeContract()"/></td>              
+              <td>Depositor02 public key</td>
+              <td><input /></td>              
             </tr>
 
 
             <tr>
-              <td>Depositor02 address:</td>
-              <td><input id="uiAddress" type="text" onchange="Controller.makeContract()"/></td>              
+              <td>Depositor02 address</td>
+              <td><input /></td>              
             </tr>      
             
             
             
             <tr>
-              <td>Depositor03 public key:</td>
-              <td><input id="uiPublicKey" type="text" onchange="Controller.makeContract()"/></td>              
+              <td>Depositor03 public key</td>
+              <td><input /></td>              
             </tr>
 
 
             <tr>
-              <td>Depositor03 address:</td>
-              <td><input id="uiAddress" type="text" onchange="Controller.makeContract()"/></td>              
+              <td>Depositor03 address</td>
+              <td><input /></td>              
             </tr>      
             
             
             <tr>
               <td>Number of keys required to sign a transaction:</td>
-              <td><input id="uiBalance" type="text" onchange="Controller.makeContract()"/></td>              
+              <td><input /></td>              
             </tr>              
 
 
             <tr>
-              <td>Balance of ADA currently in contract:</td>
-              <td><input id="uiBalance" type="text" onchange="Controller.makeContract()"/></td>              
+              <td>Balance of ADA currently in contract</td>
+              <td><input "/></td>              
             </tr>      
             
             
             <tr>
               <td>Stake Pool:</td>
-              <td><input id="uiStakePool" type="text" onchange="Controller.makeContract()"/></td>              
+              <td><input /></td>              
             </tr>             
 
 
             <tr>
-              <td><label for="uiAmount">Deposit amount:</label></td>
-              <td><input id="uiAmount" type="text" onchange="Controller.makeContract()"/></td>
+              <td>Deposit amount</td>
+              <td><input /></td>
             </tr>
+                
             <tr>
-              <td><label for="uiDepositTime">Deposit deadline:</label></td>
-              <td><input id="uiDepositTime" type="text" onchange="Controller.makeContract()"/></td>
+              <td>Deposit deadline</td>
+              <td><input /></td>
             </tr>
 
 
             <tr>
-              <td><label for="uiWAmount">Withdrawal amount:</label></td>
-              <td><input id="uiWAmount" type="text" /></td>
+              <td>Withdrawal amount</td>
+              <td><input /></td>
             </tr>
+                
             <tr>
-              <td><label for="uiWithdrawalTime">Withdrawal deadline:</label></td>
-              <td><input id="withdrawalTime" type="text" /></td>
+              <td>Withdrawal deadline</td>
+              <td><input /></td>
             </tr>
 
 
@@ -106,58 +107,58 @@
             </tr>
 
             <tr>
-              <td><label for="ui_number of epochs-from-now">Number of epochs from now before release:</label></td>
-              <td><input id="ui_number of epochs-from-now" type="text" /></td>
+              <td>Number of epochs from now before release</td>
+              <td><input /></td>
+            </tr>
+
+                
+            <tr>
+              <td>global-release-epoch</td>
+              <td><input readonly style="background-color: lightgray;"/></td>
             </tr>
 
             <tr>
-              <td><label for="ui_global-release-epoch">global-release-epoch:</label></td>
-              <td><input id="ui_global-release-epoch" type="text" readonly style="background-color: lightgray;"/></td>
+              <td>Recovery address 01</td>
+              <td><input /></td>
             </tr>
 
             <tr>
-              <td><label for="uiReceiver">Recovery address 01:</label></td>
-              <td><input id="uiReceiver" type="text" onchange="Controller.makeContract()"/></td>
-            </tr>
-
-            <tr>
-              <td><label for="uiReleaseTime">Release delay in epochs for 01:</label></td>
-              <td><input id="uiReleaseTime" type="text" onchange="Controller.makeContract()"/></td>
+              <td>Release delay in epochs for 01</td>
+              <td><input /></td>
             </tr>
 
 
             <tr>
-              <td><label for="uiReceiver">Recovery address 02:</label></td>
-              <td><input id="uiReceiver" type="text" onchange="Controller.makeContract()"/></td>
+              <td>Recovery address 02</label></td>
+              <td><input /></td>
             </tr>
 
             <tr>
-              <td><label for="uiReleaseTime">Release delay in epochs for 02:</label></td>
-              <td><input id="uiReleaseTime" type="text" onchange="Controller.makeContract()"/></td>
+              <td>Release delay in epochs for 02</td>
+              <td><input /></td>
+            </tr>
+            
+
+            <tr>
+              <td>Recovery address 03</td>
+              <td><input /></td>
+            </tr>
+
+            <tr>
+              <td>Release delay in epochs for 03</td>
+              <td><input /></td>
             </tr>
             
             
 
             <tr>
-              <td><label for="uiReceiver">Recovery address 03:</label></td>
-              <td><input id="uiReceiver" type="text" onchange="Controller.makeContract()"/></td>
+              <td>Recovery address 04</label></td>
+              <td><input /></td>
             </tr>
 
             <tr>
-              <td><label for="uiReleaseTime">Release delay in epochs for 03:</label></td>
-              <td><input id="uiReleaseTime" type="text" onchange="Controller.makeContract()"/></td>
-            </tr>
-            
-            
-
-            <tr>
-              <td><label for="uiReceiver">Recovery address 04:</label></td>
-              <td><input id="uiReceiver" type="text" onchange="Controller.makeContract()"/></td>
-            </tr>
-
-            <tr>
-              <td><label for="uiReleaseTime">Release delay in epochs for 04:</label></td>
-              <td><input id="uiReleaseTime" type="text" onchange="Controller.makeContract()"/></td>
+              <td>Release delay in epochs for 04</td>
+              <td><input /></td>
             </tr>            
 
 
@@ -167,41 +168,33 @@
           <thead><tr><th colspan="2">Transactions</th></tr></thead>
           <tbody>
             <tr>
-              <td><button id="uiCreate" type="button" onclick="Controller.createContract()">Create contract</button></td>
-              <td><span id="uiCreateTx"/></td>
+              <td><button>Create contract</button></td>
             </tr>
             <tr>
-              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">Deposit funds</button></td>
-              <td><span id="uiDepositTx"/></td>
+              <td><button>Deposit funds</button></td>
             </tr>
             <tr>
-              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">Withdraw funds</button></td>
-              <td><span id="uiDepositTx"/></td>
+              <td><button>Withdraw funds</button></td>
             </tr> 
             <tr>
-              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">Stake Funds</button></td>
-              <td><span id="uiDepositTx"/></td>
+              <td><button>Stake Funds</button></td>
             </tr> 
             <tr>
-              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">Update Global Release Epoch</button></td>
-              <td><span id="uiDepositTx"/></td>
+              <td><button>Update Global Release Epoch</button></td>
             </tr> 
             <tr>
-              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">Add, Update, Delete Recovery Addresses</button></td>
-              <td><span id="uiDepositTx"/></td>
+              <td><button>Add, Update, Delete Recovery Addresses</button></td>
             </tr> 
 
             <tr>
-              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">Add, Update, Delete the Delays On Individual Recovery Addresses</button></td>
-              <td><span id="uiDepositTx"/></td>
+              <td><button>Add, Update, Delete the Delays On Individual Recovery Addresses</button></td>
             </tr> 
 
             <tr>
               <td colspan="2"><em>Release the funds after the next block is produced after the “release time”.</em></td>
             </tr>
             <tr>
-              <td><button id="uiRelease" type="button" onclick="Controller.releaseFunds()">Release funds to recovery address</button></td>
-              <td><span id="uiReleaseTx"/></td>
+              <td><button>Release funds to recovery address</button></td>
             </tr>
 
 
@@ -216,7 +209,7 @@
           <thead><tr><th colspan="2">Example</th></tr></thead>
           <tbody>
             <tr>
-              <td><button id="uiRestart" type="button" onclick="Controller.restart()">Restart example</button></td>
+              <td><button>Restart example</button></td>
               <td/>
             </tr>
           </tbody>
@@ -232,11 +225,11 @@
             </tr>
             <tr>
               <td></td>
-              <td><span id="uiContractId"/></td>
+              <td></td>
             </tr>
             <tr>
               <td></td>
-              <td id="uiContract"/>
+              <td/>
             </tr>
           </tbody>
         </table>
