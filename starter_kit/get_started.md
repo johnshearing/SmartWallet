@@ -38,3 +38,4 @@ This approach seems most simple and does not require leaving the Marlowe environ
 Thank you for coming up with the idea wmo.co 
 I think you have already ensured our success.
 
+More info to come shortly
