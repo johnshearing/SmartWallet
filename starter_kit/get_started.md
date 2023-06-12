@@ -1,4 +1,4 @@
-To work along on your own, follow the installation instructions found at the following link.
+To work along on your own, follow the installation instructions found at the following link.  
 https://github.com/input-output-hk/marlowe-starter-kit
 
 Any behavior we wish to create from Brian's example can be accomplished by making changes to these three files:
