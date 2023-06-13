@@ -2,8 +2,7 @@
 [index.html](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/index.html), [view.css](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/view.css), and [controller.js](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/controller.js)   
 So if you setup the official starter kit linked below and substitute the three files found here for the three in the official repository then you can see my changes and make your own.  
 
-The development approach is to make incremental small (non-breaking) changes to the example Marlowe application provided by Brian Bush of IOG.  
-Little by little we will transform the example into the desired smart contract wallet with recovery options.  
+The development approach is to make incremental small (non-breaking) changes to the example Marlowe application provided by Brian Bush of IOG. Little by little we will transform the example into the desired smart contract wallet with recovery options.  
 
 To work along on your own, follow the installation instructions found at the following link.  
 https://github.com/input-output-hk/marlowe-starter-kit/blob/main/docker.md  
