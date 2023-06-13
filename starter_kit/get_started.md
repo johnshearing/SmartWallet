@@ -8,7 +8,7 @@ So if you setup the official starter kit linked above and substitute the three f
 The problem we hope to solve may be the biggest obstacle for mass adoption.  
 Most people remain in the legacy financial system because they can't manage their 24 words.  
 Many of the worlds population just don't have a secure place to store their words.  
-Many fear they may lose access to their crypto funds either by theft or lack of familiarity with basic security.  
+Many fear they may lose access to their crypto funds either by theft or from lack of familiarity with basic security.  
 Finally, there is no simple and foolproof way for the average person to transfer their crypto to beneficiaries.  
 
 The Ledger company tried to solve the problem by sending the keys out of their "secure" device.  
