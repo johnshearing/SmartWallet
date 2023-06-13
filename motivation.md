@@ -41,3 +41,14 @@ A bit of time arithmetic in the contract will be required.
 We will need to know if the release date can be pushed forward indefinitely using this method.  
 If not then we will likely just make a new contract each time we need to push the release epoch forward.  
 
+Brian Bush also noted the following:  
+Future versions of the Marlowe language might evolve to include updating of addresses etc. after the contract has been created.  
+This is an open-source project, so what future versions of the language will support depends upon community involvement.  
+Feel free to post feature requests:  
+GitHub issues for public feature requests: https://github.com/input-output-hk/marlowe-cardano/issues  
+Zendesk tickets for requests to IOG: https://iohk.zendesk.com/  
+Discussion of proposals for changes to the Marlowe language: https://github.com/input-output-hk/MIPs/discussions  
+
+Brian Bush noted the following with regard to development strategy:    
+I've found, personally, that starting with a small contract that is a just microcosm of the contract I eventually want to build helps me understand the issues involved and gives me new ideas for features and workarounds; sometimes a slight reframing of the use case can make the contract far easier to implement.  
+I've learned a lot from experimenting with small Marlowe prototypes.  
