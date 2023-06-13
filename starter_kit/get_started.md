@@ -14,10 +14,12 @@ If running that command produces a permissions error then run the following line
 `sudo chown -R $(id -u):$(id -g) /var/lib/docker/volumes/marlowe-starter-kit_shared/_data/node.socket`  
 
 These two notes are not stated in the instructions.  
-
+  
 The companion video for the installation instructions is found at the following link:  
-https://youtu.be/45F5ld8NNHM  
+https://youtu.be/45F5ld8NNHM   
 
+
+The following are the installation commands:  
 ```  
 git clone https://github.com/input-output-hk/marlowe-starter-kit/tree/bwbush/CIP30   
 cd marlowe-starter-kit  
@@ -67,6 +69,15 @@ cardano-cli query tip --testnet-magic "$CARDANO_TESTNET_MAGIC" | json2yaml
 
 If you get a permissions error after running the last command then run the following command and then query the tip again.  
 `sudo chown -R $(id -u):$(id -g) /var/lib/docker/volumes/marlowe-starter-kit_shared/_data/node.socket`  
+
+
+#### Running the CIP30 example:  
+At the terminal window, cd into the following directory:  
+`cd 06-cip30`  
+
+With your browser, go to the following webpage and follow the instructions there:  
+https://github.com/input-output-hk/marlowe-starter-kit/tree/bwbush/CIP30/06-cip30  
+
 
 ### Any behavior we wish to create from IOG's official example can be accomplished by making changes to these three files:   
 index.html, view.css, and controller.js   
