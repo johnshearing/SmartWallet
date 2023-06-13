@@ -36,3 +36,10 @@ Thanks to Brian Bush of IOG for teaching Marlowe and for the CIP30 example.
 Thanks to wmo.co for coming up with the idea to use the datum for carrying the contract parameters.  
 
 More info to come shortly.  
+
+Notes:  
+Brian Bush noted that the release epoch can be updated using a Choice block that contains a TimeInvervalEnd value.  
+A bit of time arithmetic in the contract will be required.  
+We will need to know if the release date can be pushed forward indefinitely using this method.  
+If not then we will likely just make a new contract each time we need to push the release epoch forward.  
+
