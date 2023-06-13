@@ -5,7 +5,7 @@ Any behavior we wish to create from Brian's example can be accomplished by makin
 index.html, view.css, and controller.js  
 So if you setup the official starter kit linked above and substitute the three files found here for the three in the offical repository then you can see my changes and make your own.  
 
-The problem I hope we can solve may be the biggest obstacle for mass adoption.  
+The problem we hope to solve may be the biggest obstacle for mass adoption.  
 Most people remain in the legacy financial system because they can't manage their 24 words.  
 Many of the worlds population just don't have a secure place to store their words.  
 Many fear they may lose access to their crypto funds either by theft or lack of familiarity with basic security.  
