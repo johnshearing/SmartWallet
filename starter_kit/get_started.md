@@ -23,7 +23,7 @@ We are trying to make a smart contract wallet with recovery options.
 The challenge is that smart contracts are not meant to be changed.  
 In fact they are immutable, they can't be changed.  
 Furthermore, they are meant to execute in a predefined series of steps from beginning to end.
-But we will need random access the these contracts.
+But we will need random access the these contracts.  
 We will need to change beneficiaries, move release dates, change stake pools, change signatories, deposit and withdraw funds, and more.
 
 To manage all the changes, we will deploy a reference script to the cardano blockchain which holds the basic structure of the smart contract wallet.
