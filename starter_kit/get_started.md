@@ -1,4 +1,4 @@
-### Any behavior we wish to create from IOG's official example can be accomplished by making changes to the three files listed below:   
+### Anything we wish to create from IOG's Marlowe example can be accomplished by making changes to following files:   
 index.html, view.css, and controller.js   
 So if you setup the official starter kit linked below and substitute the three files found here for the three in the official repository then you can see my changes and make your own.  
 
