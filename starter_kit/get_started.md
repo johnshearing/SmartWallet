@@ -1,9 +1,9 @@
-### Any behavior we wish to create from IOG's official example can be accomplished by making changes to these three files:   
+### Any behavior we wish to create from IOG's official example can be accomplished by making changes to the three files listed below:   
 index.html, view.css, and controller.js   
 So if you setup the official starter kit linked below and substitute the three files found here for the three in the official repository then you can see my changes and make your own.  
 
-Development approach is to make small (non-breaking) changes to the example application provided by IOG.  
-Little by little transforming the example into the desired smart contract wallet with recovery options.  
+The development approach is to make incremental small (non-breaking) changes to the example Marlowe application provided by Brian Bush of IOG.  
+Little by little we will transform the example into the desired smart contract wallet with recovery options.  
 
 To work along on your own, follow the installation instructions found at the following link.  
 https://github.com/input-output-hk/marlowe-starter-kit/blob/main/docker.md  
