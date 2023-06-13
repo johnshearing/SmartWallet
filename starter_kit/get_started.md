@@ -13,7 +13,7 @@ Finally, there is no simple and foolproof way for the average person to transfer
 
 The Ledger company tried to solve the problem by sending the private keys out of their "secure" device.  
 They think the customers they gain will more than make up for the customers they lost when they broke their security promise to the community.  
-I think we can give people the protection they need without forcing them to give up their keys.  
+Perhaps we can give people the protection they need without forcing them to give up their keys.  
 
 Whatever we come up with has to be secure, very simple to use, and extremely difficult to misuse.  
 And if the contract owner dies then it must be very simple for beneficiaries to claim the funds.  
