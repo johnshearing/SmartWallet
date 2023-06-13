@@ -11,7 +11,7 @@ Many of the worlds population just don't have a secure place to store their word
 Many fear they may lose access to their crypto funds either by theft or from lack of familiarity with basic security.  
 Finally, there is no simple and foolproof way for the average person to transfer their crypto to beneficiaries.  
 
-The Ledger company tried to solve the problem by sending the keys out of their "secure" device.  
+The Ledger company tried to solve the problem by sending the private keys out of their "secure" device.  
 They think the customers they gain will more than make up for the customers they lost when they broke their security promise to the community.  
 I think we can give people the protection they need without forcing them to give up their keys.  
 
