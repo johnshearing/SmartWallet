@@ -26,7 +26,7 @@ We could think of this much like an instance of the class where contract owners,
 
 Then the owner can then send funds to the contract for safe keeping.  
 
-When the contract owner does anything such as deposit or withdraw funds, change the stake pool, move the release date, or anything else, the action is taken and then a new contract is generated with the new parameters.  
+When the contract owner does anything such as: deposit or withdraw funds, change the stake pool, move the release date, or anything else, the action is taken and then a new contract is generated from the reference script using the new parameters carried by the transaction datum.  
 Then funds are moved from the old contract to the new in the same transaction.  
 We can think of the old smart contract as like an eUTxO, and the new contract as a change address.  
 
