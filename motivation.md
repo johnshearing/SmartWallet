@@ -33,9 +33,7 @@ We can think of the old smart contract as like an eUTxO, and the new contract as
 If the contract owner loses the hardware wallet controlling the smart contract or if the owner dies then, after a set period of delay, the contract funds become available to claim using hardware wallets which control the recovery addresses.  
 
 Thanks to Brian Bush of IOG for teaching Marlowe and for the CIP30 example.  
-Thanks to wmo.co for coming up with the idea to use the datum for carrying the contract parameters.  
-
-More info to come shortly.  
+Thanks to wmo.co for coming up with the idea to use the datum for carrying the contract parameters.   
 
 Notes:  
 Brian Bush noted that the release epoch can be updated using a Choice block that contains a TimeInvervalEnd value.  
