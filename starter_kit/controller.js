@@ -106,7 +106,7 @@ function waitCursor() {
   document.body.style.cursor = "wait"
   uiCreate.style.cursor = "wait"
   uiDeposit.style.cursor = "wait"
-  uiRelease.style.cursor = "wait"
+  uiRecoveryAddress01.style.cursor = "wait"
   uiMessage.innerText = "Working . . ."
 }
 
@@ -118,7 +118,7 @@ function report(message) {
   document.body.style.cursor = "default"
   uiCreate.style.cursor = "default"
   uiDeposit.style.cursor = "default"
-  uiRelease.style.cursor = "default"
+  uiRecoveryAddress01.style.cursor = "default"
   status(message)
 }
 
@@ -239,7 +239,7 @@ export async function depositFunds() {
       return function() {
         setTx(uiDepositTx, tx)
         uiDeposit.disabled = true
-        uiRelease.disabled = false
+        uiRecoveryAddress01.disabled = false
       }
     }
   )
@@ -256,7 +256,7 @@ export async function releaseFunds() {
   , function(tx) {
       return function() {
         setTx(uiReleaseTx, tx)
-        uiRelease.disabled = true
+        uiRecoveryAddress01.disabled = true
       }
     }
   )
@@ -342,7 +342,7 @@ export async function initialize() {
   uiReleaseTime.disabled = false
 
   uiDeposit.disabled = true
-  uiRelease.disabled = true
+  uiRecoveryAddress01.disabled = true
 
   uiDepositAmount.value = 10 * ada
 
