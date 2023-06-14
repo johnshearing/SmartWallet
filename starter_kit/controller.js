@@ -46,7 +46,7 @@ function setAddress(a) {
     bytes.push(parseInt(a.substr(c, 2), 16))
   address = bech32.encode("addr_test", bech32.toWords(bytes), 1000)
   const display = address.substr(0, 20) + "..." + address.substr(address.length - 15)
-  uiOwnerAddress01.innerHTML = "<a href='https://preprod.cardanoscan.io/address/" + a + "' target='marlowe'>" + display + "</a>"
+  uiOwnerAddress.innerHTML = "<a href='https://preprod.cardanoscan.io/address/" + a + "' target='marlowe'>" + display + "</a>"
 }
 
 
@@ -80,9 +80,9 @@ export function makeContract() {
       {
         case : {
           party : { address : address }
-        , deposits : parseInt(uiAmount.value)
+        , deposits : parseInt(uiDepositAmount.value)
         , of_token : { currency_symbol : "", token_name : "" }
-        , into_account : { address : uiReceiver.value }
+        , into_account : { address : uiRecoveryAddress01.value }
         }
       , then : {
           when : []
@@ -181,8 +181,8 @@ export async function createContract() {
   , uiRuntime.value + "/contracts"
   , "application/vendor.iog.marlowe-runtime.contract-tx-json"
   , function(res) {
-      uiReceiver.disabled = true
-      uiAmount.disabled = true
+      uiRecoveryAddress01.disabled = true
+      uiDepositAmount.disabled = true
       uiDepositTime.disabled = true
       uiReleaseTime.disabled = true
       setContract(res.resource.contractId)
@@ -230,9 +230,9 @@ export async function depositFunds() {
   , [
       {
         input_from_party : {address : address}
-      , that_deposits : parseInt(uiAmount.value)
+      , that_deposits : parseInt(uiDepositAmount.value)
       , of_token : {currency_symbol : "", token_name : ""}
-      , into_account: {address : uiReceiver.value}
+      , into_account: {address : uiRecoveryAddress01.value}
       }
     ]
   , function(tx) {
@@ -336,15 +336,15 @@ export async function initialize() {
 
   uiRuntime.value = "http://127.0.0.1:3780"
 
-  uiReceiver.disabled = false
-  uiAmount.disabled = false
+  uiRecoveryAddress01.disabled = false
+  uiDepositAmount.disabled = false
   uiDepositTime.disabled = false
   uiReleaseTime.disabled = false
 
   uiDeposit.disabled = true
   uiRelease.disabled = true
 
-  uiAmount.value = 10 * ada
+  uiDepositAmount.value = 10 * ada
 
   const depositTime = new Date()
   depositTime.setMinutes(depositTime.getMinutes() + 10)
@@ -359,7 +359,7 @@ export async function initialize() {
     nami = n
     nami.getChangeAddress().then(function(a) {
       setAddress(a)
-      uiReceiver.value = address
+      uiRecoveryAddress01.value = address
       makeContract()
     }).catch(function(error) {
       report(error)
