@@ -52,16 +52,15 @@ body {
 
 /* JRS */
 
-img {
+#uiPanelRight {
   display: none;
 }
 
-
-
-#uiOwnerAddress01 {
-  display: inline-block;
+#uiOwnerAddress {
+  display: block;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid black;
   padding: 1px;
+  height: 100%;
 }
