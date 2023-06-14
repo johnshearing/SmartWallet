@@ -14,6 +14,7 @@ If we can build a smart contract wallet with these qualities then we open the do
 
 We are trying to make a smart contract wallet with recovery options.  
 If the contract owner loses the hardware wallet controlling the smart contract or if the owner dies then, after a set period of delay, the contract funds become available to claim using hardware wallets which control the recovery addresses.  
+
 The challenge is that smart contracts are not meant to be changed.  
 In fact they are immutable, they can't be changed.  
 Furthermore, they are meant to execute in a predefined series of steps from beginning to end. But we will need random access to these contracts.  
