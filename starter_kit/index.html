@@ -10,8 +10,33 @@
 
   </head>
   <body id="uiBody" onload="Controller.initialize(false)">
-    <h1>Example of Using Marlowe Runtime with a CIP30 Wallet</h1>
-    <p>This example shows how to use a Babbage-compatible <a href="https://github.com/cardano-foundation/CIPs/tree/master/CIP-0030" target="marlowe">CIP30</a> wallet such as <a href="https://namiwallet.io/" target="marlowe">Nami</a> to sign Marlowe transactions. The example contract here simply receives a deposit and waits until a specified time before the funds become payable to an address.</p>
+    <h2>
+        Example Using Marlowe Runtime with a CIP30 Wallet <br>
+        Extended For Development Of Smart Contract Wallet With Recovery Options
+    </h2>
+    <h3>
+      Special thanks to Brian Bush of IOG for mentorship and for creating the framework for this project
+    </h3>
+
+    <p>
+      <a href="https://github.com/johnshearing/SmartWallet/blob/main/motivation.md">Description and motivation for this project is found at this link here</a>
+    </p>
+
+    <p>
+      <a href="https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md">Instructions for installing this project on your computer is found at this link here</a>
+    </p>
+    
+
+
+    <p>
+       This example shows how to use a Babbage-compatible <a href="https://github.com/cardano-foundation/CIPs/tree/master/CIP-0030" target="marlowe">CIP30</a> wallet such as <a href="https://namiwallet.io/" target="marlowe">Nami</a> to sign Marlowe transactions.<br> 
+       Currently the example contract here simply receives a deposit and waits until a specified time before the funds become payable to an address.<br>
+       Mocked up fields in gray help us imagine what data must be collected and what functions must be implemented in order to achieve our goal.<br>
+       Functionality is implemented in small steps without ever breaking the application.<br>
+       In this way we will arive at our Smart Contract Wallet With Recovery Options.
+    </p>
+
+
     <div id="uiPanels">
       <div id="uiPanelLeft">
 
@@ -31,59 +56,97 @@
           <thead>
         </table>
 
-
         <table>
           <thead>
             <tr>
-              <th colspan="2">Proposed parameters for contract</th>
+              <th colspan="2">Proposed parameters for new contract</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><label for="uiAddSignatoryAddress">Add Signatory Address:</label></td>
-              <td><input id="uiAddSignatoryAddress" type="text" /></td>
+              <td><input id="uiAddSignatoryAddress" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>            
             <tr>
               <td><label for="uiDeleteSignatoryAddress">Delete Signatory Address:</label></td>
-              <td><input id="uiDeleteOwner" type="text" /></td>
+              <td><input id="uiDeleteOwner" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>
             <tr>
-              <td><label for="uiChangeReqNumSig">Chng Req Num of Sigs:</label></td>
-              <td><input id="uiChangeReqNumSig" type="text" /></td>
+              <td><label for="uiChangeReqNumSigs">Chng Req Num of Sigs:</label></td>
+              <td><input id="uiChangeReqNumSig" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>     
             <tr>
               <td><label for="uiDepositAmount">Deposit amount:</label></td>
               <td><input id="uiDepositAmount" type="text" onchange="Controller.makeContract()" /></td>
             </tr>
             <tr>
-              <td><label for="uiDepositTime">Deposit deadline:Field Depricated</label></td>
+              <!-- <td><label for="uiDepositTime">Deposit deadline:Field Depricated</label></td> -->
+              <td><label for="uiDepositTime">Deposit deadline:<span style="color: red;">Field Depricated</span></label></td>
+
               <td><input id="uiDepositTime" type="text" onchange="Controller.makeContract()" /></td>
             </tr>  
             <tr>
               <td><label for="uiWithdrawAmount">Withdraw amount:</label></td>
-              <td><input id="uiWithdrawAmount" type="text" onchange="Controller.makeContract()" /></td>
+              <td><input id="uiWithdrawAmount" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>
-
-
+            <tr>
+              <td><label for="uiChangeStakePoolTo">Change Stake Pool To:</label></td>
+              <td><input id="uiChangeStakePoolTo" type="text" readonly="" style="background-color: lightgray;" /></td>
+            </tr>
             <tr>
               <td><label for="uiEpochsUntilAnyRecoveryIsPermitted">Epochs Before Any Recovery Is Permitted:</label></td>
-              <td><input id="uiEpochsUntilAnyRecoveryIsPermitted" type="text" /></td>
+              <td><input id="uiEpochsUntilAnyRecoveryIsPermitted" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>
 
             <tr>
               <td><label for="uiAddEditRecoveryAddress">Add/Edit Recovery address:</label></td>
-              <td><input id="uiAddEditRecoveryAddress" type="text" /></td>
+              <td><input id="uiAddEditRecoveryAddress" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>
             <tr>
               <td><label for="uiReleaseDelayForRecoveryAddress">Release Delay For This Recovery Address (epochs):</label></td>
-              <td><input id="uiReleaseDelayForRecoveryAddress" type="text" /></td>
+              <td><input id="uiReleaseDelayForRecoveryAddress" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>   
             <tr>
               <td><label for="uiDeleteRecoveryAddress">Delete Recovery Address:</label></td>
-              <td><input id="uiDeleteRecoveryAddress" type="text" /></td>
-            </tr>                                
+              <td><input id="uiDeleteRecoveryAddress" type="text" readonly="" style="background-color: lightgray;" /></td>
+            </tr>   
+            <tr>
+              <td><button id="uiCreate" type="button" onclick="Controller.createContract()">Create/Update contract</button></td>
+              <td><span id="uiCreateTx"></span></td>
+            </tr>                                         
           </tbody>
-        </table>        
+        </table>       
+        
+        
+
+
+
+
+
+
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Release Funds</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="uiReleaseToThisRecoveryAddress">Release To This Recovery Address:</label></td>
+              <td><input id="uiReleaseToThisRecoveryAddress" type="text" readonly="" style="background-color: lightgray;" /></td>
+            </tr>             
+            <tr>
+              <td><button id="uiRelease" type="button" onclick="Controller.releaseFunds()">3. Release funds</button></td>
+              <td><span id="uiReleaseTx"></span></td>
+            </tr>
+          </tbody>
+          <thead>
+        </table>
+
+
+
+
+
 
 
 
@@ -97,19 +160,31 @@
             <tr>
               <td>Contract ID:</td>
               <td><span id="uiContractId"></span></td>
-            </tr>          
+            </tr> 
             <tr>
-              <td>ownerAddress:</td>
+              <td><label for="uiContractBalance">Contract Balance:</label></td>
+              <td>
+                <input id="uiContractBalance" type="text" readonly="" style="background-color: lightgray;" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="uiContractStakePool">Contract Stake Pool:</label></td>
+              <td>
+                <input id="uiContractStakePool" type="text" readonly="" style="background-color: lightgray;" />
+              </td>
+            </tr>
+            <tr>
+              <td>OwnerAddress:</td>
               <td><span id="uiOwnerAddress"></span></td>                                     
             </tr>
             <tr>
-              <td>signatoryAddress01:</td>
+              <td>SignatoryAddress01:</td>
               <td>
                 <input id="uiSignatoryAddress01" type="text" readonly="" style="background-color: lightgray;" />
               </td>
             </tr>
             <tr>
-              <td>signatoryAddress02:</td>
+              <td>SignatoryAddress02:</td>
               <td>
                 <input id="uiSignatoryAddress02" type="text" readonly="" style="background-color: lightgray;" />
               </td>
@@ -121,34 +196,32 @@
               </td>
             </tr>
             <tr>
+              <td><label for="uiReleaseTime">Global Release Time:</label></td>
+              <td><input id="uiReleaseTime" type="text" onchange="Controller.makeContract()" /></td>
+            </tr>
+            <tr>
               <td><label for="uiRecoveryAddress01">Recovery Address01:</label></td>
               <td><input id="uiRecoveryAddress01" type="text" onchange="Controller.makeContract()" /></td>
-            </tr>
-            <tr>
-              <td><label for="uiReleaseTime">Release time:</label></td>
-              <td><input id="uiReleaseTime" type="text" onchange="Controller.makeContract()" /></td>
             </tr> 
-          </tbody>
-          <thead>
             <tr>
-              <th colspan="2">Transactions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><button id="uiCreate" type="button" onclick="Controller.createContract()">1. Create contract</button></td>
-              <td><span id="uiCreateTx"></span></td>
+              <td><label for="uiReleaseDelayInEpochsForRecoveryAddress01">Release Delay In Epochs For Recovery Address01:</label></td>
+              <td><input id="uiReleaseDelayInEpochsForRecoveryAddress01" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>
             <tr>
-              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">2. Deposit funds</button></td>
-              <td><span id="uiDepositTx"></span></td>
+              <td><label for="uiRecoveryAddress02">Recovery Address02:</label></td>
+              <td><input id="uiRecoveryAddress02" type="text" readonly="" style="background-color: lightgray;" /></td>
+            </tr> 
+            <tr>
+              <td><label for="uiReleaseDelayInEpochsForRecoveryAddress02">Release Delay In Epochs For Recovery Address02:</label></td>
+              <td><input id="uiReleaseDelayInEpochsForRecoveryAddress02" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>
             <tr>
-              <td colspan="2"><em>Release the funds after the next block is produced after the “release time”.</em></td>
-            </tr>
+              <td><label for="uiRecoveryAddress03">Recovery Address03:</label></td>
+              <td><input id="uiRecoveryAddress03" type="text" readonly="" style="background-color: lightgray;" /></td>
+            </tr> 
             <tr>
-              <td><button id="uiRelease" type="button" onclick="Controller.releaseFunds()">3. Release funds</button></td>
-              <td><span id="uiReleaseTx"></span></td>
+              <td><label for="uiReleaseDelayInEpochsForRecoveryAddress03">Release Delay In Epochs For Recovery Address03:</label></td>
+              <td><input id="uiReleaseDelayInEpochsForRecoveryAddress03" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>
           </tbody>
           <thead>
@@ -167,6 +240,10 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">2. Deposit funds: <span style="color: red;">Button Depricated</span></button></td>
+              <td><span id="uiDepositTx"></span></td>
+            </tr>            
             <tr>
               <td><button id="uiRestart" type="button" onclick="Controller.restart()">Restart example</button></td>
               <td ></td>
