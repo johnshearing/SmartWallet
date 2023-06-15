@@ -31,9 +31,9 @@ No one we need to trust.
 <img src="/images/smart_wallet.jpg">  
 
 
-Deploying a smart contract with the following properties should make this possible.
-* Contract can receive funds like any wallet.
-* Contract can disperse funds of a given amount... to a given receiving address... given the correct signature... just like any wallet.
+We are working to build a smart contract with the following properties to make this possible.
+* Contract can receive funds just like any wallet.
+* Contract can disperse funds just like any wallet.
 * Contract contains a parameter called **global-release-epoch**
   * This defines the epoch when contract funds can be claimed by recovery addresses.
 * Contract can receive a message signed with the owner's hardware wallet proving ownership of the contract.  
