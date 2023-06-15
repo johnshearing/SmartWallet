@@ -4,7 +4,8 @@
 [Instructions for installing this project on your computer is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md)   
 [Milestones and current progress is tracked at this link here](https://github.com/johnshearing/SmartWallet/blob/main/milestones-current-progress.md)  
 ### The mockup seen below gives us a quick idea of what the smart wallet does.
-<img src="/images/smart_wallet.jpg"> 
+<img src="/images/smart_wallet.jpg">  
+
 ## Cardano Smart Contract Works With Your Hardware Wallet
 ## Use It Just Like Any Hardware Wallet
 ## Trustless Last Will and ADA Recovery Options Supported
