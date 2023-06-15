@@ -15,7 +15,7 @@ After cloning the starter kit and after changing into to the starter kit directo
 ### To avoid permissions error:   
 During the installation, you will be asked to run the following command:    
 `cardano-cli query tip`   
-If running that command produces a permissions error then run the following line before `cardano-cli query tip` is attempted.  
+If running that command produces a permissions error then run the following line before `cardano-cli query tip` is attempted again.  
 
 `sudo chown -R $(id -u):$(id -g) /var/lib/docker/volumes/marlowe-starter-kit_shared/_data/node.socket`  
 
