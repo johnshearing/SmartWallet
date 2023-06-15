@@ -11,6 +11,8 @@
 [Description and motivation for this project is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/motivation.md)  
 [Instructions for installing this project on your computer is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md)   
 
+<img src="/images/smart_wallet.jpg">  
+
 Difficulty securing seed phrases might be the biggest obstacle for cryptocurrency mass-adoption.  
 Loss of seed phrases due to untimely death causes suffering to families.  
 SmartWallet fixes these issues.  
@@ -25,11 +27,7 @@ Funds are always safe.
 Nothing to lose.  
 Nothing to get stolen.  
 Nothing to forget.  
-No one we need to trust.  
-
-
-<img src="/images/smart_wallet.jpg">  
-
+No one we need to trust.   
 
 We are working to build a smart contract with the following properties to make this possible.
 * Contract can receive funds just like any wallet.
