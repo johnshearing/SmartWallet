@@ -11,6 +11,7 @@
 
 [Description and motivation for this project is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/motivation.md)  
 [Instructions for installing this project on your computer is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md)   
+[Milestones and current progress is tracked at this link here](https://github.com/johnshearing/SmartWallet/blob/main/milestones-current-progress.md)
 
 <img src="/images/smart_wallet.jpg">  
 
