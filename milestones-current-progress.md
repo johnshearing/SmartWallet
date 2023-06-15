@@ -2,7 +2,7 @@
 Make continuous small changes to IOG's working CIP30 smart contract and UI example until we have the smart contract wallet with recovery options.  
 
 ### Completed  
-Mockup of UI in HTML, CSS and JavaScript based on IOG's CIP30 smart contract example with no breaking changes.  
+[Functioning mockup of UI](https://github.com/johnshearing/SmartWallet/tree/main/starter_kit) in HTML, CSS and JavaScript based on IOG's CIP30 smart contract example with no breaking changes.  
 * Now we have an idea about:  
   * What the user will see and do
   * What data we need to collect from the user and from the blockchain
