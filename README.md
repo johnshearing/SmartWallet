@@ -7,6 +7,7 @@
 ## Funds released to recovery accounts or beneficiaries after a period of inactivity
 ## :)
 ## Muti-signatures supported.  
+## This is a work in progress, not a finished project.
 
 [Description and motivation for this project is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/motivation.md)  
 [Instructions for installing this project on your computer is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md)   
