@@ -106,7 +106,7 @@ function waitCursor() {
   document.body.style.cursor = "wait"
   uiCreate.style.cursor = "wait"
   uiDeposit.style.cursor = "wait"
-  uiRecoveryAddress01.style.cursor = "wait"
+  uiRelease.style.cursor = "wait"
   uiMessage.innerText = "Working . . ."
 }
 
@@ -118,7 +118,7 @@ function report(message) {
   document.body.style.cursor = "default"
   uiCreate.style.cursor = "default"
   uiDeposit.style.cursor = "default"
-  uiRecoveryAddress01.style.cursor = "default"
+  uiRelease.style.cursor = "default"
   status(message)
 }
 
@@ -239,7 +239,7 @@ export async function depositFunds() {
       return function() {
         setTx(uiDepositTx, tx)
         uiDeposit.disabled = true
-        uiRecoveryAddress01.disabled = false
+        uiRelease.disabled = false
       }
     }
   )
@@ -256,7 +256,7 @@ export async function releaseFunds() {
   , function(tx) {
       return function() {
         setTx(uiReleaseTx, tx)
-        uiRecoveryAddress01.disabled = true
+        uiRelease.disabled = true
       }
     }
   )
@@ -342,16 +342,16 @@ export async function initialize() {
   uiReleaseTime.disabled = false
 
   uiDeposit.disabled = true
-  uiRecoveryAddress01.disabled = true
+  uiRelease.disabled = true
 
   uiDepositAmount.value = 10 * ada
 
   const depositTime = new Date()
-  depositTime.setMinutes(depositTime.getMinutes() + 10)
+  depositTime.setMinutes(depositTime.getMinutes() + 5)
   uiDepositTime.value = depositTime.toISOString()
 
   const releaseTime = new Date()
-  releaseTime.setMinutes(releaseTime.getMinutes() + 15)
+  releaseTime.setMinutes(releaseTime.getMinutes() + 10)
   uiReleaseTime.value = releaseTime.toISOString()
 
   // Connect to the Nami wallet.
