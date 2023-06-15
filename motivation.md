@@ -13,7 +13,7 @@ And if the contract owner dies then it must be very simple for beneficiaries to 
 If we can build a smart contract wallet with these qualities then we open the doors to everyone.  
 
 We are trying to make a smart contract wallet with recovery options.  
-If the contract owner loses the hardware wallet controlling the smart contract or if the owner dies then, after a set period of delay, the contract funds become available to claim using hardware wallets which control the recovery addresses.  
+If the contract owner loses the hardware wallet controlling the smart contract or if the owner dies then, after a set period of delay, the contract funds become available to claim using hardware wallets which control previously set recovery addresses.  
 
 The challenge is that smart contracts are not meant to be changed.  
 In fact they are immutable, they can't be changed.  
