@@ -8,6 +8,14 @@
 ## :)
 ## Muti-signatures supported.  
 
+    <p>
+      <a href="https://github.com/johnshearing/SmartWallet/blob/main/motivation.md">Description and motivation for this project is found at this link here</a>
+    </p>
+
+    <p>
+      <a href="https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md">Instructions for installing this project on your computer is found at this link here</a>
+    </p>
+
 Difficulty securing seed phrases might be the biggest obstacle for cryptocurrency mass-adoption.  
 Loss of seed phrases due to untimely death causes suffering to families.  
 SmartWallet fixes these issues.  
