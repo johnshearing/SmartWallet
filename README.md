@@ -9,7 +9,7 @@
 ## Muti-signatures supported.  
 
 [Description and motivation for this project is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/motivation.md)  
-[Instructions for installing this project on your computer is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md)  
+[Instructions for installing this project on your computer is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md)   
 
 Difficulty securing seed phrases might be the biggest obstacle for cryptocurrency mass-adoption.  
 Loss of seed phrases due to untimely death causes suffering to families.  
@@ -26,6 +26,10 @@ Nothing to lose.
 Nothing to get stolen.  
 Nothing to forget.  
 No one we need to trust.  
+
+
+<img src="/images/smart_wallet.jpg">  
+
 
 Deploying a smart contract with the following properties should make this possible.
 * Contract can receive funds like any wallet.
