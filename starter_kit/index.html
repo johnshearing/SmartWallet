@@ -69,14 +69,15 @@
               <td><label for="uiRuntime">URL</label></td>
               <td><input id="uiRuntime" type="text" /></td>
             </tr>
+            <tr>
+              <td><button id="uiRestart" type="button" onclick="Controller.restart()">Restart example</button></td>
+              <td></td>              
+            </tr>            
           </tbody>
-          <thead>
-        </table>
 
-        <table>
           <thead>
             <tr>
-              <th colspan="2">Proposed parameters for new contract</th>
+              <th colspan="2">Proposed Parameters For A New Or Updated Contract</th>
             </tr>
           </thead>
           <tbody>
@@ -97,10 +98,13 @@
               <td><input id="uiDepositAmount" type="text" onchange="Controller.makeContract()" /></td>
             </tr>
             <tr>
-              <!-- <td><label for="uiDepositTime">Deposit deadline:Field Depricated</label></td> -->
-              <td><label for="uiDepositTime">Deposit deadline:<span style="color: red;">Field Depricated</span></label></td>
+              <td><label for="uiDepositTime">Deposit deadline:<span style="color: red;">Field To Be Deprecated</span></label></td>
               <td><input id="uiDepositTime" type="text" onchange="Controller.makeContract()" /></td>
-            </tr>  
+            </tr>
+            <tr>
+              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">Deposit funds: <span style="color: red;">Button To Be Deprecated</span></button></td>
+              <td><span id="uiDepositTx"></span></td>
+            </tr>               
             <tr>
               <td><label for="uiWithdrawAmount">Withdraw amount:</label></td>
               <td><input id="uiWithdrawAmount" type="text" readonly="" style="background-color: lightgray;" /></td>
@@ -131,45 +135,10 @@
               <td><span id="uiCreateTx"></span></td>
             </tr>                                         
           </tbody>
-        </table>       
-        
-        
 
-
-
-
-
-
-        <table>
           <thead>
             <tr>
-              <th colspan="2">Release Funds</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><label for="uiReleaseToThisRecoveryAddress">Release To This Recovery Address:</label></td>
-              <td><input id="uiReleaseToThisRecoveryAddress" type="text" readonly="" style="background-color: lightgray;" /></td>
-            </tr>             
-            <tr>
-              <td><button id="uiRelease" type="button" onclick="Controller.releaseFunds()">3. Release funds</button></td>
-              <td><span id="uiReleaseTx"></span></td>
-            </tr>
-          </tbody>
-          <thead>
-        </table>
-
-
-
-
-
-
-
-
-        <table>
-          <thead>
-            <tr>
-              <th colspan="2">Current parameters for contract</th>
+              <th colspan="2">Current Parameters For Contract</th>
             </tr>
           </thead>
           <tbody>
@@ -239,35 +208,27 @@
               <td><label for="uiReleaseDelayInEpochsForRecoveryAddress03">Release Delay In Epochs For Recovery Address03:</label></td>
               <td><input id="uiReleaseDelayInEpochsForRecoveryAddress03" type="text" readonly="" style="background-color: lightgray;" /></td>
             </tr>
-          </tbody>
-          <thead>
             <tr>
-              <th colspan="2">Last message</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td id="uiMessage" colspan="2" ></td>
-            </tr>
-          </tbody>
-          <thead>
-            <tr>
-              <th colspan="2">Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><button id="uiDeposit" type="button" onclick="Controller.depositFunds()">2. Deposit funds: <span style="color: red;">Button Depricated</span></button></td>
-              <td><span id="uiDepositTx"></span></td>
+              <td>Last message</td>              
+              <td id="uiMessage"></td>              
             </tr>            
+          </tbody>
+          <thead>
             <tr>
-              <td><button id="uiRestart" type="button" onclick="Controller.restart()">Restart example</button></td>
-              <td ></td>
+              <th colspan="2">Release Funds</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="uiReleaseToThisRecoveryAddress">Release To This Recovery Address:</label></td>
+              <td><input id="uiReleaseToThisRecoveryAddress" type="text" readonly="" style="background-color: lightgray;" /></td>
+            </tr>             
+            <tr>
+              <td><button id="uiRelease" type="button" onclick="Controller.releaseFunds()">3. Release funds</button></td>
+              <td><span id="uiReleaseTx"></span></td>
             </tr>
           </tbody>
         </table>
-
-      </div>
 
 
       <div id="uiPanelRight">
@@ -284,6 +245,7 @@
             </tr>
           </tbody>
         </table>
+      </div>        
       </div>
     </div>
   </body>
