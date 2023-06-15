@@ -77,6 +77,51 @@ If you get a permissions error after running the last command then run the follo
 `sudo chown -R $(id -u):$(id -g) /var/lib/docker/volumes/marlowe-starter-kit_shared/_data/node.socket`  
 
 
+### Marlowe Runtime Proxy Service
+
+Check that the `marlowe-runtime-cli` command can communicate with the Marlowe Runtime backend services by querying the history of one of the Marlowe contracts that has previously been executed on the blockchain.
+
+```bash
+marlowe-runtime-cli log "f06e4b760f2d9578c8088ea5289ba6276e68ae3cbaf5ad27bcfc77dc413890db#1"
+```
+
+```console
+transaction f06e4b760f2d9578c8088ea5289ba6276e68ae3cbaf5ad27bcfc77dc413890db (creation)
+ContractId:      f06e4b760f2d9578c8088ea5289ba6276e68ae3cbaf5ad27bcfc77dc413890db#1
+SlotNo:          11630746
+BlockNo:         224384
+BlockId:         f729f57b3bd99dd1d55a5a65b8c74f459dadae784dd55536444770dd2c2cdd2e
+ScriptAddress:   addr_test1wp4f8ywk4fg672xasahtk4t9k6w3aql943uxz5rt62d4dvqu3c6jv
+Marlowe Version: 1
+
+
+
+transaction 5a3ed57653b4635c76d2949558f3718e34324a8a1ffc740360ae7d85839de6d9 (close)
+ContractId: f06e4b760f2d9578c8088ea5289ba6276e68ae3cbaf5ad27bcfc77dc413890db#1
+SlotNo:     16674281
+BlockNo:    458964
+BlockId:    23adcef9d89afc4354155c62960512c810619d8244239f8c642745b034a58fc2
+Inputs:     []
+```    
+
+
+### Marlowe Runtime Web Server
+
+Check that one can communicate with the Marlowe Runtime web server and receive a `200 OK` response.
+
+
+```bash
+curl -sSI "$MARLOWE_RT_WEBSERVER_URL/healthcheck"
+```
+
+```console
+HTTP/1.1 200 OK
+Date: Thu, 16 Mar 2023 18:12:51 GMT
+Server: Warp/3.3.24
+Content-Type: application/json;charset=utf-8
+```
+
+
 #### Running the CIP30 example:  
 At the terminal window, cd into the following directory:  
 `cd 06-cip30`  
