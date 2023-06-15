@@ -27,28 +27,11 @@ No one we need to trust.
 Deploying a smart contract with the following properties should make this possible.
 * Contract can receive funds like any wallet.
 * Contract can disperse funds of a given amount... to a given receiving address... given the correct signature... just like any wallet.
-* Contract contains a variable called **owners-public-key**
-  * This is used to verify that commands sent to the contract have been signed by the owner's hardware wallet.
-* Contract contains a variable called **global-release-epoch**.
-  * This is the epoch at which it becomes possible to send funds to recovery accounts or to the beneficiary accounts.
-* Contract contains a variable called **number of epochs-from-now**.
-  * This is a number used to update the **global-release-epoch**. 
-* Contract contains as many variables as needed called **recovery-address-01**, **recovery-address-02**, **...**
-  * These are the addresses which can claim funds if the contract owner dies, or loses the hardware wallet controlling the contract.
-* Contract contains as many variables as needed called **extra-epochs-delayed-for-recovery-address-01**, **extra-epochs-delayed-for-recovery-address-02**, **...**
-  * These variables are used to specify how many epochs past the **global-release-epoch** each recovery address must wait before it becomes valid and able to claim funds.
-* Contract can disperse all funds to any recovery address after the **global-release-epoch** has been passed.
-* If the number of epochs specified in the **extra-epochs-delayed-for-recovery-address-XX** is greater than zero then that many epochs must also pass after **global-release-epoch** has been reached before funds can be sent to that address.
-* We notice there can be many preprogrammed recovery addresses, each associated with their own unique times in the future when it will be possible to send funds to those unique addresses. 
-  * The first of these addresses serves as the primary recovery or beneficiary address.
-  * The rest of these serve as backup addresses in case the contract owner or first beneficiary loses control of the hardware wallet which controls the recovery address.
-  * The times when each recovery address can become valid may be staggered creating an order in which people may claim the funds.
-* For the contract to disperse all funds to a preprogrammed recovery/beneficiary address, the contract owner or beneficiary must send a signed transaction from the hardware wallet controlling the recovery address at any time after the address becomes valid. The contract will then immediately send all funds in the contract to the recovery address.
-  * This method establishes that the contract owner or beneficiary has control of the preprogrammed recovery address and so ensures that the funds will not be lost.
-* Contract can receive a message signed with the owner's hardware wallet proving ownership of the contract.
+* Contract contains a parameter called **global-release-epoch**
+  * This defines the epoch when contract funds can be claimed by recovery addresses.
+* Contract can receive a message signed with the owner's hardware wallet proving ownership of the contract.  
   * The message may contain a command to add, update, or deleted recovery addresses and their associated delays past the **global-release-epoch**.
-  * The message may contain a command to change the value stored in the variable called **number of epochs-from-now**.  
-  * The message may contain a command to update the **global-release-epoch** with respect to **number of epochs-from-now**.  
+  * The message may contain a command to change the value stored in the variable called **global-release-epoch**.
     * This is how the owner tells the contract that he or she is still alive and in control of their hardware wallet.
     * This is also how the contract owner sets the time interval before the owner/beneficiaries can recover all the funds from the contract. 
     * If the owner does not message the contract again within the time specified by **number of epochs-from-now** then it is presumed that the owner has lost the control of their hardware wallet or is perhaps dead. 
