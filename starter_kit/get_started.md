@@ -19,7 +19,8 @@ If running that command produces a permissions error then run the following line
 
 `sudo chown -R $(id -u):$(id -g) /var/lib/docker/volumes/marlowe-starter-kit_shared/_data/node.socket`  
 
-These two notes are not stated in the instructions.  
+These two notes are not stated in the video linked below. 
+But the video has important information so you should follow the video as you follow these instructions.
   
 The companion video for the installation instructions is found at the following link:  
 https://youtu.be/45F5ld8NNHM   
