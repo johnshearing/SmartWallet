@@ -5,6 +5,23 @@
     <link href="view.css" type="text/css" rel="stylesheet"/>
     <script src="controller.js" type="application/javascript"> </script>
     <script type="text/javascript" src="node_modules/renderjson/renderjson.js"></script>
+
+    <style>
+      /* Add styling for the fields */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      input[readonly] {
+        background-color: lightgray;
+      }
+    </style>
+
     <title>Example of Using Marlowe Runtime with Nami Wallet</title>
 
 
@@ -82,7 +99,6 @@
             <tr>
               <!-- <td><label for="uiDepositTime">Deposit deadline:Field Depricated</label></td> -->
               <td><label for="uiDepositTime">Deposit deadline:<span style="color: red;">Field Depricated</span></label></td>
-
               <td><input id="uiDepositTime" type="text" onchange="Controller.makeContract()" /></td>
             </tr>  
             <tr>
@@ -201,7 +217,7 @@
             </tr>
             <tr>
               <td><label for="uiRecoveryAddress01">Recovery Address01:</label></td>
-              <td><input id="uiRecoveryAddress01" type="text" onchange="Controller.makeContract()" /></td>
+              <td><input id="uiRecoveryAddress01" type="text" onchange="Controller.makeContract()" /></td>     
             </tr> 
             <tr>
               <td><label for="uiReleaseDelayInEpochsForRecoveryAddress01">Release Delay In Epochs For Recovery Address01:</label></td>
