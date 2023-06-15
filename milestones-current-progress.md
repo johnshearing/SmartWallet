@@ -10,5 +10,6 @@ Mockup of UI in HTML, CSS and JavaScript based on IOG's CIP30 smart contract exa
 
 ### In Progress  
 Deploy a reference script to the testnet which will serve as template for any user's smart contract wallet.  
+[Using the example linked here for guidance.](https://github.com/input-output-hk/real-world-marlowe/blob/main/firsts/reference/ReadMe.ipynb)
 
 ### Planned   
