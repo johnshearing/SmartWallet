@@ -13,6 +13,7 @@
 [Instructions for installing this project on your computer is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md)   
 [Milestones and current progress is tracked at this link here](https://github.com/johnshearing/SmartWallet/blob/main/milestones-current-progress.md)
 
+### The mockup seen below gives us a quick idea of what the smart wallet does.
 <img src="/images/smart_wallet.jpg">  
 
 Difficulty securing seed phrases might be the biggest obstacle for cryptocurrency mass-adoption.  
