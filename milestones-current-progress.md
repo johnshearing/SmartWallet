@@ -6,10 +6,15 @@ Make continuous small changes to IOG's working CIP30 smart contract and UI examp
 * Now we have an idea about:  
   * What the user will see and do
   * What data we need to collect from the user and from the blockchain
-  * What functions we will need to implement in order to achieve our goal.  
+  * What functions we will need to implement in order to achieve our goal.
+ 
+ Deploy a reference script to the testnet which will serve as template for any user's smart contract wallet.  
+[Using the example linked here for guidance.](https://github.com/input-output-hk/real-world-marlowe/blob/main/firsts/reference/ReadMe.ipynb)
+
+It was discovered that reference scripts can not be used to receive parameters.  
+So I have found no viable method for using old scripts as eUTxOs and new scripts as change addresses.
 
 ### In Progress  
-Deploy a reference script to the testnet which will serve as template for any user's smart contract wallet.  
-[Using the example linked here for guidance.](https://github.com/input-output-hk/real-world-marlowe/blob/main/firsts/reference/ReadMe.ipynb)
+
 
 ### Planned   
