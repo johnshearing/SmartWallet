@@ -15,6 +15,7 @@ It was discovered that reference scripts can not be used to receive parameters.
 So I have found no viable method for using old scripts as eUTxOs and new scripts as change addresses.
 
 ### In Progress  
-
+Progress stalled.
+Looking for other ways to produce wallet functionality with recovery options which do not require giving up custody of private keys.
 
 ### Planned   
