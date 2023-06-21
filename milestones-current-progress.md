@@ -11,7 +11,7 @@ Make continuous small changes to IOG's working CIP30 smart contract and UI examp
  Deploy a reference script to the testnet which will serve as template for any user's smart contract wallet.  
 [Using the example linked here for guidance.](https://github.com/input-output-hk/real-world-marlowe/blob/main/firsts/reference/ReadMe.ipynb)
 
-It was discovered that reference scripts can not be used to receive parameters.  
+It was discovered that reference scripts can not be used to receive parameters so they are not suitable for use as smart contract templates  
 So I have found no viable method for using old scripts as eUTxOs and new scripts as change addresses.
 
 ### In Progress  
