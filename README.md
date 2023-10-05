@@ -1,7 +1,7 @@
 ## Smart Contract Wallet With Recovery Options  
 **This approach was determined not viable.  
 The use case and problem statement are still valid so it's worth a look.  
-Other approaches are currently being investigated.**  
+Other approaches using Zero Knowledge Proofs are currently being investigated.**  
 [Description and motivation for this project is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/motivation.md)  
 [Instructions for installing this project on your computer is found at this link here](https://github.com/johnshearing/SmartWallet/blob/main/starter_kit/get_started.md)   
 [Milestones and current progress is tracked at this link here](https://github.com/johnshearing/SmartWallet/blob/main/milestones-current-progress.md)  
