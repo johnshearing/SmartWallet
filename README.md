@@ -1,4 +1,4 @@
-## Smart Contract Wallet With Recovery Options  
+## Cardano Smart Contract Wallet With Recovery Options  
 **This approach was determined not viable.  
 The use case and problem statement are still valid so it's worth a look.  
 Other approaches using Zero Knowledge Proofs are currently being investigated.**  
